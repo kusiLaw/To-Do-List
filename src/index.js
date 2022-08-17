@@ -1,34 +1,33 @@
 import './style.css';
 
-let todo = [
- {
-  description: "Morning session group",
-  complete : true,
-  index : 0
- },
- {
-  description: "After program group",
-  complete : true,
-  index : 1
- },
- {
-  description: "Even session group",
-  complete : false,
-  index : 2
- },
- {
-  description: "Weekend program",
-  complete : true,
-  index : 3
- },
-]
+const todo = [
+  {
+    description: 'Morning session group',
+    complete: true,
+    index: 0,
+  },
+  {
+    description: 'After program group',
+    complete: true,
+    index: 1,
+  },
+  {
+    description: 'Even session group',
+    complete: false,
+    index: 2,
+  },
+  {
+    description: 'Weekend program',
+    complete: true,
+    index: 3,
+  },
+];
 
-const ul = document.getElementById('list')
+const ul = document.getElementById('list');
 const loadList = () => {
-  ul.style.display="flex"
+  ul.style.display = 'flex';
   todo.forEach((obj) => {
-   
-   ul.innerHTML +=`
+    ul.innerHTML += `
    <li class="list-item">
    <div>
    <input type="checkbox" name="checkbox" id="id-${obj.index}" value="${obj.complete}">
@@ -38,9 +37,8 @@ const loadList = () => {
    <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
    </div>
   </li>
-   `
+   `;
+  });
+};
 
-  })
-}
-
-loadList()
+window.onload = loadList();

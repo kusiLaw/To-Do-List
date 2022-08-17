@@ -10,80 +10,85 @@
 }
 
 body {
- font-family: Lato, Helvetica, sans-serif;
- min-width: 32rem;
- background-color: #f6f6f6;
+  font-family: Lato, Helvetica, sans-serif;
+  min-width: 32rem;
+  background-color: #f6f6f6;
 }
 
 html {
- font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-header{
- /* border: 1px solid rebeccapurple; */
- padding-top: 5rem;
- width: 100%;
- display: flex;
- justify-content: center;
+header {
+  /* border: 1px solid rebeccapurple; */
+  padding-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-h1{
- font-size: 2.5rem;
- color: darkgray;
+h1 {
+  font-size: 2.5rem;
+  color: darkgray;
 }
 
-main{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- width: 100%;
- font-size: 1.6rem;
- /* border: 1px solid red; */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.6rem;
+
+  /* border: 1px solid red; */
 }
 
-.list-container{
- background-color: white;
- color: darkgray;
- width: 80%;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- margin-top: 3rem;
+.list-container {
+  background-color: white;
+  color: darkgray;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 3rem;
 }
+
 @media (min-width: 768px) {
- .list-container {
-  width: 50%;
- }
+  .list-container {
+    width: 50%;
+  }
 }
 
-h2{
- font-weight: 500;
- /* font-style: italic; */
- color: darkgray;
+h2 {
+  font-weight: 500;
+
+  /* font-style: italic; */
+  color: darkgray;
 }
 
-.list-container > *{
- width: 99%;
- border-bottom: 1px solid gray;
- padding: 1.5rem;
+.list-container > * {
+  width: 99%;
+  border-bottom: 1px solid gray;
+  padding: 1.5rem;
 }
 
-.list-container .heading-wrapper{
- display: flex;
- justify-content: space-between;
- align-items: center;
- /* border: 1px solid red; */
-}
-.list-container input[type="checkbox" ]{
- margin-right: 1.2rem ;
- margin-left: 0.5rem;
+.list-container .heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border: 1px solid red; */
 }
 
-.list-container input{
- font-style: italic;
+.list-container input[type="checkbox"] {
+  margin-right: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.list-container input {
+  font-style: italic;
 }
 
 .list-container input,
@@ -91,46 +96,48 @@ h2{
 .list-container input:hover,
 .list-container button:hover,
 .list-container input:active,
-.list-container button:active{
- border: none;
- height: 100%;
- font-size: 2rem;
- color: rgb(49, 49, 49);
+.list-container button:active {
+  border: none;
+  height: 100%;
+  font-size: 2rem;
+  color: rgb(49, 49, 49);
 }
 
-.list-container button:hover{
- background-color: #e6e6e6;
+.list-container button:hover {
+  background-color: #e6e6e6;
 }
 
- #list{
- display: none;
- flex-direction: column;
- list-style-type: none;
- color: rgb(49, 49, 49);
- padding: 0rem;
- width: 100%;
- /* border: 1px solid red; */
+#list {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  color: rgb(49, 49, 49);
+  padding: 0;
+  width: 100%;
+
+  /* border: 1px solid red; */
 }
 
-#list li{
- width: 99%;
- border-bottom: 1px solid gray;
- color: rgb(49, 49, 49);
- padding: 0.5rem;
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: space-between;
- /* border: 1px solid red; */
+#list li {
+  width: 99%;
+  border-bottom: 1px solid gray;
+  color: rgb(49, 49, 49);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  /* border: 1px solid red; */
 }
 
-#list li span{
- /* justify-self: flex-end; */
- height: 5rem;
- padding-right: 2rem;
- display: inline-flex;
- justify-content: center;
- align-items: center;
- font-size: larger;
- color: darkgray;
+#list li span {
+  /* justify-self: flex-end; */
+  height: 5rem;
+  padding-right: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  color: darkgray;
 }
