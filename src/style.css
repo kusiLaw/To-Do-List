@@ -61,7 +61,7 @@ main{
 
 h2{
  font-weight: 500;
- font-style: italic;
+ /* font-style: italic; */
  color: darkgray;
 }
 
@@ -76,6 +76,14 @@ h2{
  justify-content: space-between;
  align-items: center;
  /* border: 1px solid red; */
+}
+.list-container input[type="checkbox" ]{
+ margin-right: 1.2rem ;
+ margin-left: 0.5rem;
+}
+
+.list-container input{
+ font-style: italic;
 }
 
 .list-container input,
@@ -94,3 +102,35 @@ h2{
  background-color: #e6e6e6;
 }
 
+ #list{
+ display: none;
+ flex-direction: column;
+ list-style-type: none;
+ color: rgb(49, 49, 49);
+ padding: 0rem;
+ width: 100%;
+ /* border: 1px solid red; */
+}
+
+#list li{
+ width: 99%;
+ border-bottom: 1px solid gray;
+ color: rgb(49, 49, 49);
+ padding: 0.5rem;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ /* border: 1px solid red; */
+}
+
+#list li span{
+ /* justify-self: flex-end; */
+ height: 5rem;
+ padding-right: 2rem;
+ display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ font-size: larger;
+ color: darkgray;
+}
