@@ -1,10 +1,11 @@
 
-# Webpack Basic Environment
-This repo install and setup basic environment for webpack projects
+# To Do List
+This repo ordered items in your do to list
 
 ### Built With
 - Html<br />
 - CSS
+- Javascript
 - webpack
 
 ### Live Demo
@@ -14,6 +15,7 @@ To get a local copy up and running follow these simple example steps
 
 #### Prerequisite:  
   - Vscode editor 
+  - Webpack
   - Knowldege About HTML / CSS Linters
   - A web browser(chrome, etc)
   - [Clone](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop ) the repository to your local machine
