@@ -9,6 +9,7 @@ This repo ordered items in your do to list
 - webpack
 
 ### Live Demo
+[live server](https://kusilaw.github.io/To-Do-List/dist/)
 
 ### Getting Started 
 To get a local copy up and running follow these simple example steps
