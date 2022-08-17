@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* reset settings for all browser */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  min-width: 32rem;
+  background-color: #f6f6f6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  /* border: 1px solid rebeccapurple; */
+  padding-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: darkgray;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.6rem;
+
+  /* border: 1px solid red; */
+}
+
+.list-container {
+  background-color: white;
+  color: darkgray;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .list-container {
+    width: 50%;
+  }
+}
+
+h2 {
+  font-weight: 500;
+
+  /* font-style: italic; */
+  color: darkgray;
+}
+
+.list-container > * {
+  width: 99%;
+  border-bottom: 1px solid gray;
+  padding: 1.5rem;
+}
+
+.list-container .heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border: 1px solid red; */
+}
+
+.list-container input[type="checkbox"] {
+  margin-right: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.list-container input {
+  font-style: italic;
+}
+
+.list-container input,
+.list-container button,
+.list-container input:hover,
+.list-container button:hover,
+.list-container input:active,
+.list-container button:active {
+  border: none;
+  height: 100%;
+  font-size: 2rem;
+  color: rgb(49, 49, 49);
+}
+
+.list-container button:hover {
+  background-color: #e6e6e6;
+}
+
+#list {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  color: rgb(49, 49, 49);
+  padding: 0;
+  width: 100%;
+
+  /* border: 1px solid red; */
+}
+
+#list li {
+  width: 99%;
+  border-bottom: 1px solid gray;
+  color: rgb(49, 49, 49);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  /* border: 1px solid red; */
+}
+
+#list li span {
+  /* justify-self: flex-end; */
+  height: 5rem;
+  padding-right: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  color: darkgray;
+}
