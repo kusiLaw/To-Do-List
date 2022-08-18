@@ -73,14 +73,7 @@ h2 {
   border-bottom: 1px solid gray;
   padding: 1.5rem;
 }
-
-.list-container .heading-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /* border: 1px solid red; */
-}
+none
 
 .list-container input[type="checkbox"] {
   margin-right: 1.2rem;
@@ -122,22 +115,39 @@ h2 {
   width: 99%;
   border-bottom: 1px solid gray;
   color: rgb(49, 49, 49);
-  padding: 0.5rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 #list li span {
   /* justify-self: flex-end; */
-  height: 5rem;
-  padding-right: 1rem;
+  height: auto;
+  width: 3rem;
+  /* border: 1px solid red; */
+  /* padding-right: 1rem; */
   display: inline-flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-size: larger;
   color: darkgray;
 }
+
+#list li span.delete-icon{
+ display: none;
+ color: red;
+ } 
+
+ #list li .edit-input{
+  display: none;
+  border: 1px solid darkgray;
+ }
+/* #list li span.collapse:hover{
+ display: none;
+
+} */
+
