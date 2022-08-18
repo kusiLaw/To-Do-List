@@ -5,25 +5,13 @@ const ul = document.getElementById('list');
 const inp = document.getElementById('add-input');
 
 let todo = [
- {
- index:1,
- description:"you",
- complete: true
-},
-{
- index:2,
- description:"me",
- complete: true
-}
 
 ];
-
-
 
 const getLocalStorage = () => {
  // Check if data is in storage and convert to js object
  if (localStorage.getItem('to-do')) {
-   return JSON.parse(localStorage.getItem('bookList'));
+   return JSON.parse(localStorage.getItem('to-do'));
  }
  return [];
 };
@@ -40,12 +28,21 @@ const addToList = (text) => {
 });
 }
 
-const deleteItem = (text) =>{
- return todo.filter((list) => list.description !== text);
+const deleteItem = (obj, index) =>{
+ return obj.filter((list) => list.index != index[1]);
 }
 
-const addListToPage = (obj) =>{
-   obj.forEach((obj) => {
+const updateIndex =(obj)=>{
+ let index = 0;
+  obj.forEach((objs) => {
+   objs.index = index;
+   index += 1
+  })
+
+}
+
+const addListToPage = (ob) =>{
+   ob.forEach((obj) => {
     ul.innerHTML += `
    <li class="list-item">
    <div>
@@ -62,11 +59,6 @@ const addListToPage = (obj) =>{
   });
 }
 
-
-const edit = (objIndex, extra={}) =>{
-
-}
-
 const toggle = (objIndex, extra={}) => {
  if (extra.property === "text-decoration"){
   // document.getElementById(`${extra.selfIdExtension}-${objIndex}`).style.display = extra.selfDisplay
@@ -80,13 +72,12 @@ const toggle = (objIndex, extra={}) => {
 
 }
 
-
 const addEvent = (arr,idExtension, eType, func, extra) =>{
  // this add event to dynamic element
  arr.forEach((obj) => {
   
   // id such " col-1"
-  document.getElementById(`${idExtension}-${obj.index}`).addEventListener(`${eType}`, (e) => {
+  document.getElementById(`${idExtension}-${obj.index}`).addEventListener(`${eType}`,(e) =>{
     e.preventDefault();
      if (e.type === "click" && idExtension ==='label'){
       
@@ -96,7 +87,7 @@ const addEvent = (arr,idExtension, eType, func, extra) =>{
        func(obj.index, extra) 
      
      }else if(e.type === "focusout" && idExtension ==="edit-input"){
-       console.log("focus out")
+      
       //label edit-input press
        //assign edit input to label if not empty
        if (document.getElementById(`${extra.selfIdExtension}-${obj.index}`).value !== ""){
@@ -107,75 +98,77 @@ const addEvent = (arr,idExtension, eType, func, extra) =>{
        }else{
         func(obj.index, extra);
        }
+
      }else{
+
       func(obj.index, extra) 
      }
-    
-
   });
  });
 };
 
-const loadList = () => {
+const loadList = (obj) => {
   ul.style.display = 'flex';
-  addListToPage(todo)
+  addListToPage(obj)
 
   //add eventListener to element
   //call advent tell it how to style yourself from others
-  addEvent(todo, 'del', 'mouseleave', toggle,
-  {selfIdExtension:"del",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension: 'col'})
+  addEvent(obj, 'del', 'mouseleave', toggle,
+  {selfIdExtension:"del",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension:'col'})
   
-  addEvent(todo, 'col', 'mouseenter', toggle, 
-  {selfIdExtension:"col",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension: 'del'})
+  addEvent(obj, 'col', 'mouseenter', toggle, 
+  {selfIdExtension:"col",selfDisplay:"none", 
+  otherDisplay:"inline-flex", otherIdExtension:'del'})
  
-  addEvent(todo, 'edit-input', 'focusout', toggle, 
-  {selfIdExtension:"edit-input",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension: 'label'})
+  addEvent(obj, 'edit-input', 'focusout', toggle, 
+ {selfIdExtension:"edit-input",selfDisplay:"none",
+  otherDisplay:"inline-flex", otherIdExtension:'label'})
  
-  addEvent(todo, 'id', 'check', toggle, 
-  {selfIdExtension:"id",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension: 'label'})
+  addEvent(obj, 'id', 'check', toggle, 
+ {selfIdExtension:"id",selfDisplay:"none", 
+ otherDisplay: "inline-flex", otherIdExtension: 'label'})
  
-  addEvent(todo, 'label', 'click', toggle, 
-  {selfIdExtension:"label",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension: 'edit-input'})
+  addEvent(obj, 'label', 'click', toggle, 
+  {selfIdExtension:"label",selfDisplay:"none", 
+  otherDisplay: "inline-flex", otherIdExtension: 'edit-input'})
  
-  addEvent(todo, 'edit-input', 'focusout', toggle, 
-  {selfIdExtension:"edit-input",selfDisplay:"none", otherDisplay: "inline-flex", otherIdExtension: 'label'})
- 
+  addEvent(obj, 'edit-input', 'focusout', toggle, 
+  {selfIdExtension:"edit-input",selfDisplay:"none", 
+  otherDisplay: "inline-flex", otherIdExtension: 'label'})
 
 };
 
 window.onload = () =>{
- // todo = getLocalStorage()
- loadList();
+ todo = getLocalStorage()
+ loadList(todo);
 } 
 
 inp.addEventListener("keypress", (event)=> {
- // event.preventDefault();
  if (event.key === 'Enter') { 
-   console.log("enter key entered")
    let val = event.target.value
-  if(/\w+/gi.test()){  //input not empty
+  if(/\w+/gi.test()){  
+   //input not empty
    todo = addToList(val)
-   console.log(todo)
+   setLocalStorage(todo);
+   ul.innerHTML = ''
+   inp.value = ""
+   loadList(todo);
  }else{
   return;
  }
  } 
 });
 
+ul.addEventListener('click',(e)=>{
+  e.preventDefault()
+ if(/[id]/.test(e.target.parentNode.id)){
+  let  val = e.target.parentNode.id.split("-");
+   todo = deleteItem(todo, val);
+   updateIndex(todo);
+   setLocalStorage(todo);
+   ul.innerHTML = '';
+   loadList(todo);
 
+  }
+})
 
-// collapseIcon.hover = ()=>{
-//   deleteIcon.style.display = 'inline-flex'
-//  collapse.style.display ="none"
-// }
-
-// const collapseIcon = document.querySelectorAll('.collapse')
-// const deleteIcon = document.querySelectorAll('.delete-icon')
-// console.log(document.querySelectorAll('.collapse'))
-// document.querySelectorAll('.collapse').forEach(item => {
-//  console.log(item.childNodes)
-//  item.childNodes.addEventListener('hover', event => {
-   
-// console.log('hovr')
-//  })
-// })
