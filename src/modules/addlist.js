@@ -1,7 +1,7 @@
 const addToList = (obj, text) => obj.concat({
  index: obj.length,
  description: text,
- complete: false,
+ completed: false,
 });
 
 export  default addToList;
