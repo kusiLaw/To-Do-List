@@ -114,6 +114,7 @@ none .list-container input[type="checkbox"] {
   color: rgb(49, 49, 49);
   padding: 2.5rem;
   display: flex;
+  font-size: 1.8rem;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

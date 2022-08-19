@@ -13,6 +13,8 @@ This repo ordered items in your do to list
 
 ### Getting Started 
 To get a local copy up and running follow these simple example steps
+- npm run dev    --> to start local server
+- npm run build  --> to update the dist folder 
 
 #### Prerequisite:  
   - Vscode editor 
