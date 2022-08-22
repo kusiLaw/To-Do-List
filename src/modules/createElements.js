@@ -42,7 +42,7 @@ const addListToPage = (ul, ob) => {
     const li = createMyElement('li', 'list-item');
     li.appendChild(div);
     li.appendChild(div2);
-    li.setAttribute('draggable', "true")
+    li.setAttribute('draggable', 'true');
     ul.appendChild(li);
   });
 };

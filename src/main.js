@@ -5,13 +5,12 @@ import { deleteItem, deleteComplete } from './modules/delete.js';
 import loadList from './modules/loadlist.js';
 import handleDrop from './modules/dragging.js';
 
-
 const ul = document.getElementById('list');
 const inp = document.getElementById('add-input');
 const delComplete = document.getElementById('delete-complete');
 
 let todo = [];
-let dragItem = null
+let dragItem = null;
 
 window.onload = () => {
   todo = getLocalStorage();
@@ -118,55 +117,49 @@ delComplete.onclick = (e) => {
   loadList(ul, todo);
 };
 
-document.addEventListener("dragstart", (event) => {
- // make it half transparent
- event.target.classList.add("dragging");
- dragItem = event.target
+document.addEventListener('dragstart', (event) => {
+  // make it half transparent
+  event.target.classList.add('dragging');
+  dragItem = event.target;
 });
 
-document.addEventListener("dragenter", (event) => {
- if (event.target.className === 'list-item' ){
-  event.target.style.backgroundColor = "rgb(233, 230, 230)"
- }
-
+document.addEventListener('dragenter', (event) => {
+  if (event.target.className === 'list-item') {
+    event.target.style.backgroundColor = 'rgb(233, 230, 230)';
+  }
 });
 
-document.addEventListener("dragleave", (event) => {
- if (event.target.className === 'list-item' ){
-  event.target.style.backgroundColor = "inherit"
- }
+document.addEventListener('dragleave', (event) => {
+  if (event.target.className === 'list-item') {
+    event.target.style.backgroundColor = 'inherit';
+  }
 });
 
-
-document.addEventListener("dragover", (event) => {
- // prevent default to allow drop
- event.preventDefault();
+document.addEventListener('dragover', (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
 });
 
-document.addEventListener("drop", (event) => {
- // prevent default action (open as link for some elements)
- event.preventDefault();
+document.addEventListener('drop', (event) => {
+  // prevent default action (open as link for some elements)
+  event.preventDefault();
 
- //if dragItem is not same as valid place it dropping
- if(dragItem !== event.target && event.target.className === 'list-item'){
+  // if dragItem is not same as valid place it dropping
+  if (dragItem !== event.target && event.target.className === 'list-item') {
   // swap innerHTML
-  let temp = dragItem.innerHTML 
-  dragItem.innerHTML  = event.target.innerHTML;
-  event.target.innerHTML = temp;
-  event.target.style.backgroundColor = "inherit"
+    const temp = dragItem.innerHTML;
+    dragItem.innerHTML = event.target.innerHTML;
+    event.target.innerHTML = temp;
+    event.target.style.backgroundColor = 'inherit';
 
-   todo =  handleDrop(event);
-   setLocalStorage(todo);
-   ul.innerHTML = '';
-   loadList(ul, todo);
- }
-
+    todo = handleDrop(event);
+    setLocalStorage(todo);
+    ul.innerHTML = '';
+    loadList(ul, todo);
+  }
 });
 
-document.addEventListener("dragend", (event) => {
- // remove half transparent
- event.target.classList.remove("dragging");
+document.addEventListener('dragend', (event) => {
+  // remove half transparent
+  event.target.classList.remove('dragging');
 });
-
-
-

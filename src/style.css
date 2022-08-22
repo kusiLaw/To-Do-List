@@ -120,9 +120,9 @@ none .list-container input[type="checkbox"] {
   justify-content: space-between;
 }
 
-#list li.dragModeEffect{
- margin-bottom: 1rem;
- background:rgb(233, 230, 230)
+#list li.dragModeEffect {
+  margin-bottom: 1rem;
+  background: rgb(233, 230, 230);
 }
 
 #list li span {
@@ -146,6 +146,6 @@ none .list-container input[type="checkbox"] {
 }
 
 .dragging {
- opacity: 0.6;
- border: 1px solid gray;
+  opacity: 0.6;
+  border: 1px solid gray;
 }
