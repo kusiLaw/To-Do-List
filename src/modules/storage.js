@@ -6,8 +6,21 @@ const getLocalStorage = () => {
   return [];
 };
 
-const setLocalStorage = (arr) => {
-  localStorage.setItem('to-do', JSON.stringify(arr));
+const verifyObject = (list) => {
+  for(let element of list){
+    if(!(element.hasOwnProperty('index') && 
+    element.hasOwnProperty('completed') && 
+    element.hasOwnProperty('description') )){
+     return false
+    }
+  }
+  return true
+}
+
+const setLocalStorage = (array) => {
+ if (Array.isArray(array) && verifyObject(array)){
+  localStorage.setItem('to-do', JSON.stringify(array));
+ }
 };
 
 export { setLocalStorage, getLocalStorage };

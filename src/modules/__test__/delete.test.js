@@ -1,4 +1,4 @@
-import { deleteComplete, deleteItem } from './delete.js';
+import { deleteComplete, deleteItem } from '../delete.js';
 
 describe('deleteItem', () => {
   test('Delete data using index', () => {

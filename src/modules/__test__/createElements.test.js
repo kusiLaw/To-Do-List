@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import addListToPage from './createElements.js';
+import addListToPage from '../createElements.js';
 
 describe('Add item to page', () => {
   test('Add item to page must return list of length = 2', () => {
@@ -22,7 +22,7 @@ describe('Add item to page', () => {
     expect(list).toHaveLength(2);
   });
 
-  test('test adding items using Local storage, return list of length = 3 ', () => {
+  test('test adding items using, return list of length = 3 ', () => {
   // Arrange
     const array = [
       { index: 0, description: 'I will join standup team', completed: false },
