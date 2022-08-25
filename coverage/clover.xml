@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1661455509510" clover="3.2.0">
-  <project timestamp="1661455509510" name="All files">
+<coverage generated="1661458295086" clover="3.2.0">
+  <project timestamp="1661458295086" name="All files">
     <metrics statements="42" coveredstatements="40" conditionals="12" coveredconditionals="11" methods="9" coveredmethods="9" elements="63" coveredelements="60" complexity="0" loc="42" ncloc="42" packages="1" files="4" classes="4"/>
     <file name="addlist.js" path="/home/lawrence/Projects/web/microverse/LAWRENCE/projects/module-2/To-Do-List/src/modules/addlist.js">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -45,11 +45,11 @@
     </file>
     <file name="delete.js" path="/home/lawrence/Projects/web/microverse/LAWRENCE/projects/module-2/To-Do-List/src/modules/delete.js">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-      <line num="1" count="1" type="stmt"/>
+      <line num="1" count="2" type="stmt"/>
       <line num="2" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="2" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
-      <line num="8" count="8" type="stmt"/>
+      <line num="8" count="12" type="stmt"/>
     </file>
     <file name="remove.js" path="/home/lawrence/Projects/web/microverse/LAWRENCE/projects/module-2/To-Do-List/src/modules/remove.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
