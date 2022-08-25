@@ -40,7 +40,7 @@ const addListToPage = (ul, ob) => {
    `;
 
     const li = createMyElement('li', 'list-item');
-    li.setAttribute('id', `li-${obj.index}`)
+    li.setAttribute('id', `li-${obj.index}`);
     li.appendChild(div);
     li.appendChild(div2);
     li.setAttribute('draggable', 'true');
