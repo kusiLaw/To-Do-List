@@ -36,7 +36,7 @@ ul.addEventListener('click', (e) => {
   /** for delete * */
   if (/del-+\w/gi.test(e.target.parentNode.id)) {
     const val = e.target.parentNode.id.split('-');
-    todo = deleteItem(todo, val[1]);
+    todo = deleteItem(todo, parseInt(val[1], 10));
     updateIndex(todo);
     setLocalStorage(todo);
     ul.innerHTML = '';
