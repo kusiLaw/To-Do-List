@@ -46,7 +46,7 @@ describe('deleteItem', () => {
   {index : 0, description: "I will join standup team",completed: false},
   {index : 1, description: "Meeting at 1pm",completed: false}
  ];
- const index = 1010.6;
+ const index = 1.1;
 
 
  //Act 
