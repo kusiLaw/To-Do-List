@@ -7,20 +7,20 @@ const getLocalStorage = () => {
 };
 
 const verifyObject = (list) => {
-  for(let element of list){
-    if(!(element.hasOwnProperty('index') && 
-    element.hasOwnProperty('completed') && 
-    element.hasOwnProperty('description') )){
-     return false
+  for (let i = 0; i < list.length; i += 1) {
+    if (!('index' in list[i]
+    && 'completed' in list[i]
+    && 'description' in list[i])) {
+      return false;
     }
   }
-  return true
-}
+  return true;
+};
 
 const setLocalStorage = (array) => {
- if (Array.isArray(array) && verifyObject(array)){
-  localStorage.setItem('to-do', JSON.stringify(array));
- }
+  if (Array.isArray(array) && verifyObject(array)) {
+    localStorage.setItem('to-do', JSON.stringify(array));
+  }
 };
 
 export { setLocalStorage, getLocalStorage };

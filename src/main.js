@@ -4,7 +4,6 @@ import addToList from './modules/addlist.js';
 import { deleteItem, deleteComplete } from './modules/delete.js';
 import loadList from './modules/loadlist.js';
 import handleDrop from './modules/dragging.js';
-import removeFromPage from './modules/remove.js';
 
 const ul = document.getElementById('list');
 const inp = document.getElementById('add-input');
@@ -40,10 +39,10 @@ ul.addEventListener('click', (e) => {
     todo = deleteItem(todo, parseInt(val[1], 10));
     updateIndex(todo);
     setLocalStorage(todo);
-    //we can use  removeFromPage( document.getElementById(`li-${val[1]}`))
-    ul.innerHTML = '' ;
+    // we can use  removeFromPage( document.getElementById(`li-${val[1]}`))
+    ul.innerHTML = '';
     loadList(ul, todo);
-    
+
     return;
   }
 
