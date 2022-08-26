@@ -7,12 +7,7 @@ const updateIndex = (obj) => {
 };
 
 const updateList = (obj, index, value, targetFiled) => {
-  // edit-input
-  obj.forEach((objs) => {
-    if (objs.index === parseInt(index, 10)) {
-      objs[targetFiled] = value;
-    }
-  });
+  obj[parseInt(index, 10)][targetFiled] = value
 };
 
 export { updateList, updateIndex };

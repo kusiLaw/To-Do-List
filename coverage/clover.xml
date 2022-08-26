@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1661463529910" clover="3.2.0">
-  <project timestamp="1661463529910" name="All files">
-    <metrics statements="51" coveredstatements="46" conditionals="14" coveredconditionals="11" methods="13" coveredmethods="11" elements="78" coveredelements="68" complexity="0" loc="51" ncloc="51" packages="1" files="5" classes="5"/>
+<coverage generated="1661521004927" clover="3.2.0">
+  <project timestamp="1661521004927" name="All files">
+    <metrics statements="61" coveredstatements="59" conditionals="23" coveredconditionals="22" methods="15" coveredmethods="15" elements="99" coveredelements="96" complexity="0" loc="61" ncloc="61" packages="1" files="6" classes="6"/>
     <file name="addlist.js" path="/home/lawrence/Projects/web/microverse/LAWRENCE/projects/module-2/To-Do-List/src/modules/addlist.js">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -56,17 +56,30 @@
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
     </file>
+    <file name="storage.js" path="/home/lawrence/Projects/web/microverse/LAWRENCE/projects/module-2/To-Do-List/src/modules/storage.js">
+      <metrics statements="12" coveredstatements="12" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="3" type="cond" truecount="5" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="21" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
     <file name="update.js" path="/home/lawrence/Projects/web/microverse/LAWRENCE/projects/module-2/To-Do-List/src/modules/update.js">
-      <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="2" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="13" count="0" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

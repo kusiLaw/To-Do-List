@@ -7,8 +7,8 @@ import {deleteItem} from '../delete.js'
 import addListToPage from '../createElements.js';
 
 
-describe('deleteComplete Dom menupulation', () => {
- test('Delete all data mark with completed as true', () => {
+describe('Update Dom element', () => {
+ test('Update index upon item deleted', () => {
    // Arrange
    let array = [
      { index: 0, description: 'I will join standup team', completed: 'false' },
@@ -37,30 +37,38 @@ describe('deleteComplete Dom menupulation', () => {
       ]);
  });
 
-//  test('Delete all data mark with completed as true', () => {
-//   // Arrange
-//   let array = [
-//     { index: 0, description: 'I will join standup team', completed: 'false' },
-//     { index: 1, description: 'Meeting at 1pm', completed: 'true' },
-//   ];
- 
-//   document.body.innerHTML = '<ul id="list">'
-//   + '<ul>'+
-//   '<button type="button"  id="delete-complete">Clear all completed</button>'
-//   ;
+ test('update object with label text', () => {
+    // Arrange
+    let array = [
+     { index: 0, description: 'I will join standup team', completed: 'false' },
+     { index: 1, description: 'Meeting at 6pm', completed: 'false' }
+   ];
   
-//   const button = document.getElementById('delete-complete')
-//   button.onclick = () =>{
-//       array = deleteComplete(array)
-//      };
-
-//      // Act
-//    button.click();
-
+   document.body.innerHTML = 
+   '<input id="id-1" type="checkbox" name="checkbox" value="true" checked="true">'
+   +'<label id="label-1" for="id-1" style="text-decoration: line-through;">lawrence</label>'
+   ;
  
-//      // Assert
-//      expect(array).toStrictEqual([{ index: 0, description: 'I will join standup team', completed: 'false' }
-//     ]);
-// });
+   let checked = document.getElementById("id-1")
+   let label = document.getElementById("label-1")
+
+   checked.onclick = () =>{
+        label.innerHTML = ''
+        label.innerHTML = 'Meeting at 6pm postponed'
+        updateList(array,1,label.innerHTML,"description")
+
+      };
+
+      // Act
+      checked.click();
+
+  
+      // Assert
+      expect(array).toStrictEqual([
+       { index: 0, description: 'I will join standup team', completed: 'false' },
+       { index: 1, description: 'Meeting at 6pm postponed', completed: 'false' }
+
+      ]);
+});
 
 });
