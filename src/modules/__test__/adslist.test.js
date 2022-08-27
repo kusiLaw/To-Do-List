@@ -1,4 +1,4 @@
-import addToList from './addlist.js';
+import addToList from '../addlist.js';
 
 describe('addToList', () => {
   test('Add new data to empty object', () => {

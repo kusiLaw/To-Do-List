@@ -39,8 +39,10 @@ ul.addEventListener('click', (e) => {
     todo = deleteItem(todo, parseInt(val[1], 10));
     updateIndex(todo);
     setLocalStorage(todo);
+    // we can use  removeFromPage( document.getElementById(`li-${val[1]}`))
     ul.innerHTML = '';
     loadList(ul, todo);
+
     return;
   }
 

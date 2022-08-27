@@ -1,8 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-import addListToPage from './createElements.js';
-import removeFromPage from './remove.js';
+import addListToPage from '../createElements.js';
+import removeFromPage from '../remove.js';
 
 describe('Remove item from page using deleteItem', () => {
   test('Delete data using index', () => {
