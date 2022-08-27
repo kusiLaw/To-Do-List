@@ -1,6 +1,6 @@
 
 # To Do List
-This repo ordered items in your do to list
+This is an app that helps people to keep their life organized by allowing them to make a list of the tasks that need to be done, they can add a new task to the list, re-arrange tasks using drag and drop,  remove a task , edit a task description , mark a task as completed and ,remove all the completed task at once , built with JavaScript
 
 ### Built With
 - Html<br />
@@ -13,8 +13,12 @@ This repo ordered items in your do to list
 
 ### Getting Started 
 To get a local copy up and running follow these simple example steps
-- npm run dev    --> to start local server
-- npm run build  --> to update the dist folder 
+- install dev dependencies
+-- npm start
+- Run sever
+-- npm run dev  
+- to update the dist folder 
+- npm run build 
 
 #### Prerequisite:  
   - Vscode editor 
