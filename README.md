@@ -14,11 +14,11 @@ This is an app that helps people to keep their life organized by allowing them t
 ### Getting Started 
 To get a local copy up and running follow these simple example steps
 - install dev dependencies
--- npm start
+  - npm start
 - Run sever
--- npm run dev  
-- to update the dist folder 
-- npm run build 
+  - npm run dev  
+- Update the dist folder 
+  - npm run build 
 
 #### Prerequisite:  
   - Vscode editor 
