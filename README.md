@@ -13,12 +13,14 @@ This is an app that helps people to keep their life organized by allowing them t
 
 ### Getting Started 
 To get a local copy up and running follow these simple example steps
-- install dev dependencies
-  - npm start
-- Run sever
-  - npm run dev  
-- Update the dist folder 
-  - npm run build 
+
+```console
+lawrence@lawrence:~$ git clone "git@github.com:kusiLaw/To-Do-List.git"
+lawrence@lawrence:~$ npm start
+starting server:~$ npm run dev.
+build production : ~$ npm run build.
+
+```
 
 #### Prerequisite:  
   - Vscode editor 
