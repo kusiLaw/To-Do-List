@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # To-Do List
-This is an app that helps people to keep their life organized by allowing them to make a list of the tasks that need to be done, they can add a new task to the list, re-arrange tasks using drag and drop,  remove a task, edit a task description, mark a task as completed and, remove all the completed task at once, built with JavaScript
+This app helps users to manage and organize their tasks. Users can add a new task, re-arrange tasks using drag and drop, remove tasks, edit a task description, mark tasks as completed, and remove all the completed tasks. Built with JavaScript.
 
 ### Built With
 - Html<br />
